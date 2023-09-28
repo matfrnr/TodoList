@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <h1>TodoList</h1>
+
+  <!--Gestion du mode sombre-->
+  <button id="darkmode-toggle">
+    <img src="./images/moon.svg" alt="Dark mode">
+  </button>
+
+  <!--Liste des taches-->
+  <ul id="task-list">
+    <li class="done">Apprendre HTML</li>
+    <li class="done">Apprendre CSS</li>
+    <li class="done">Apprendre Javascript</li>
+    <li class="done">Apprendre PHP</li>
+    <li class="done">Apprendre SQL</li>
+    <li>Apprendre C++</li>
+   
+  </ul>
+
+  <!--Pour ajouter une nouvelle tache-->
+  <form action="#">
+    <input type="text" id="new-task">
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <script src="./javascript/todo.js"></script>
+</body>
+</html>
