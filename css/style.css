@@ -1,0 +1,88 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  width: 50%;
+  max-width: 800px;
+  min-width: 480px;
+  margin: 0 auto;
+  background: #dff;
+  color: #022;
+  padding: 1em 2em;
+}
+
+/*Pour le mode sombre*/
+body.dark {
+  background: rgb(20, 19, 19);
+  color: #dff;
+}
+
+
+
+#darkmode-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+#darkmode-toggle img {
+  max-width: 2em;
+  height: auto;
+}
+
+#task-list > li {
+  list-style: "☐ ";
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+}
+
+#task-list > li.done {
+  text-decoration: line-through;
+  list-style: "☑ ";
+}
+
+/*Ajouter le texte lors de l'ajout*/
+.new::after {
+  display: inline-block;
+  position: relative;
+  content: "new";
+  border: 1px solid;
+  border-radius: 5px;
+  margin-left: 1em;
+  padding: 2px;
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+@media screen and (min-width: 1400px) {
+  body {
+    max-width: 1000px;
+    min-width: 600px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  #darkmode-toggle img {
+    max-width: 4em;
+    height: auto;
+  }
+  #task-list > li {
+    margin-bottom: 1em;
+    font-size: 2.5em;
+  }
+  #new-task,
+  button {
+    padding: 0.8rem 3rem;
+  }
+}
