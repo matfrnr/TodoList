@@ -1,0 +1,106 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  width: 50%;
+  max-width: 1000px;
+  min-width: 600px;
+  margin: 0 auto;
+  background: #dff;
+  color: #022;
+  padding: 1em 3em;
+  user-select: none;
+}
+
+/*Pour le mode sombre*/
+body.dark {
+  background: rgb(20, 19, 19);
+  color: #dff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#darkmode-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+#darkmode-toggle img {
+  max-width: 4em;
+  height: auto;
+}
+
+#task-list > li {
+  list-style: "☐ ";
+  margin-bottom: 0.7em;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+#task-list > li.done {
+  text-decoration: line-through;
+  list-style: "☑ ";
+}
+
+#new-task,
+#submit {
+  padding: 10px;
+}
+
+#new-task {
+  border: 2px solid grey;
+  background: rgb(226, 237, 248);
+}
+
+#new-task:focus {
+  outline: 1px solid lightcoral;
+  border: none;
+  background: rgb(193, 190, 190);
+}
+
+#submit:hover {
+  filter: brightness(80%);
+  transition: 0.4s;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  filter: brightness(80%);
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 1em 2em;
+    overflow: hidden;
+  }
+  #darkmode-toggle img {
+    max-width: 2.5em;
+    height: auto;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  #new-task,
+  #submit {
+    padding: 3px;
+  }
+  #new-task{
+    margin-left: 10px;
+  }
+}
